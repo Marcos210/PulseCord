@@ -379,7 +379,7 @@
     canvas.width = 1280;
     canvas.height = 720;
     canvas.style.cssText = 'width:100%;height:100%;display:block;background:#000;border-radius:inherit;object-fit:contain;';
-    const ring = tileEl.querySelector('.ember-ring');
+    const ring = tileEl.querySelector('.pulse-ring');
     videoEl.style.display = 'none';
     ring.insertBefore(canvas, ring.querySelector('.avatar-fallback'));
 
@@ -565,7 +565,7 @@
     const peer = {
       pc, name, tileEl,
       videoEl: tileEl.querySelector('video'),
-      ring: tileEl.querySelector('.ember-ring'),
+      ring: tileEl.querySelector('.pulse-ring'),
       analyser: null, raf: null, sharingScreen: false,
       audioCtx, gainNode, sourceNode: null,
     };
@@ -680,7 +680,7 @@
     if (localStream.getVideoTracks().length) {
       tileEl.querySelector('.avatar-fallback').style.display = 'none';
     }
-    const peer = { videoEl, ring: tileEl.querySelector('.ember-ring'), tileEl, analyser: null, raf: null };
+    const peer = { videoEl, ring: tileEl.querySelector('.pulse-ring'), tileEl, analyser: null, raf: null };
     peers.set('self', peer);
     startAudioMeter(peer, localStream);
   }

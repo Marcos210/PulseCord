@@ -1,4 +1,4 @@
-# 🔥 PulseCord
+# ⚡ PulseCord
 
 Um app simples pra você e seus amigos: chat, chamada de voz/vídeo e
 compartilhamento de tela, em salas com código e senha.
